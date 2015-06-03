@@ -80,6 +80,12 @@ module.exports = function(grunt) {
       }
     });
 
-    Q.all(this.data.tasks.map(spawn)).then(done, done.bind(this, false));
-  });
+    Q.allSettled(this.data.tasks.map(spawn)).
+      then(function(results) {
+          var failedTasks = results.filter(function(result) {
+            return result.state !== "fulfilled";
+          });
+          
+          done(failedTasks.length === 0);
+      });
 };
