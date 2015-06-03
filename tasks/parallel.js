@@ -88,5 +88,5 @@ module.exports = function(grunt) {
           
           done(failedTasks.length === 0);
       });
-});
+  });
 };
