@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/iammerrick/grunt-parallel.git"
+    "url": "git://github.com/chilliflake/grunt-parallel.git"
   },
   "bugs": {
     "url": "https://github.com/iammerrick/grunt-parallel/issues"
